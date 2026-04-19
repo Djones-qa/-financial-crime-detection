@@ -1,10 +1,10 @@
-﻿name: Financial Crime Detection Tests
+name: Financial Crime Detection Tests
 
 on:
   push:
-    branches: [main]
+    branches: [main, master]
   pull_request:
-    branches: [main]
+    branches: [main, master]
 
 jobs:
   crime-detection-tests:

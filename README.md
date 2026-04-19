@@ -1,6 +1,6 @@
 # Financial Crime Detection 🕵️‍♂️💸
 
-![CI Status](https://github.com/Djones-qa/-financial-crime-detection/actions/workflows/crime-detection-tests.yml/badge.svg)
+![CI Status](https://github.com/Djones-qa/-financial-crime-detection/actions/workflows/crime-detection-tests.yml/badge.svg?branch=master)
 
 A comprehensive Python-based engine designed to simulate and detect complex financial crime patterns. This intelligent suite leverages behavioral analysis and statistical anomaly detection to identify suspicious activities in synthetic transaction datasets.
 
