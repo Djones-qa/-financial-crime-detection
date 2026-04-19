@@ -1,0 +1,31 @@
+﻿name: Financial Crime Detection Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  crime-detection-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run detection tests
+        run: python -m pytest tests/ -v --tb=short
+
+      - name: Upload charts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: crime-detection-charts
+          path: visuals/

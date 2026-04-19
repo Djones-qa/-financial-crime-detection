@@ -1,0 +1,20 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.3, pytest-9.0.2, pluggy-1.6.0
+rootdir: D:\financial-crime-detection
+configfile: pytest.ini
+plugins: anyio-4.13.0, Faker-40.13.0, base-url-2.1.0, html-4.2.0, metadata-3.1.1, playwright-0.7.2
+collected 52 items
+
+tests\test_data_generation.py ....................                       [ 38%]
+tests\test_fraud_detection.py ..................F....                    [ 82%]
+tests\test_visualizations.py .........                                   [100%]
+
+================================== FAILURES ===================================
+________________ TestRiskScoring.test_high_risk_accounts_exist ________________
+tests\test_fraud_detection.py:131: in test_high_risk_accounts_exist
+    assert len(high_risk) > 0
+E   assert 0 > 0
+E    +  where 0 = len(Empty DataFrame\nColumns: [account_id, name, country, velocity_flag, geo_risk_score, anomaly_count, structuring_flag, composite_risk_score, risk_level]\nIndex: [])
+=========================== short test summary info ===========================
+FAILED tests/test_fraud_detection.py::TestRiskScoring::test_high_risk_accounts_exist
+======================== 1 failed, 51 passed in 40.43s ========================
